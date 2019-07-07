@@ -1,0 +1,16 @@
+{
+  "name": "johannestrepesch.de",
+  "version": "1.0.0",
+  "description": "A very basic homepage as front of my server space",
+  "author": "Johannes Trepesch <web-github@johannestrepesch.de>",
+  "repository": "git@github.com:HannesT117/johannestrepesch.de.git",
+  "license": "BSD3",
+  "private": true,
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.0"
+  }
+}
