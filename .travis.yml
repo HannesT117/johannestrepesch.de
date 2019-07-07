@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+  - node
+
+cache: npm
+
+addons:
+  apt:
+    packages:
+      - sshpass
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - build_dir=dist/.
+
+script: "true"
+
+before_deploy:
+  - npm run build
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: bash scripts/deploy.sh
+    on:
+      branch: master
