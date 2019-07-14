@@ -44,6 +44,6 @@ a:hover {
 @media all and (min-width: 815px) and (min-height: 500px) {
   body {
     margin: 0;
-    padding: 100px 15% 0% 15%;
+    margin: 150px 25% 0% 25%;
   }
 }

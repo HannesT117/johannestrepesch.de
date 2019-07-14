@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -ev
+set -e
 
 deploy_assets_to_server () {
   dist_folder=$1
