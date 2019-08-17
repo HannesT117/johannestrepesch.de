@@ -7,6 +7,7 @@ deploy_assets_to_server () {
   echo "Start deploying assets to remote."
 
   export SSHPASS=$deploy_password
+  sshpass -e ssh -o stricthostkeychecking=no $deploy_user@$deploy_host "find $deploy_path -type f \( \! -name $deploy_preserve \) -exec rm {} \;" 
   sshpass -e scp -o stricthostkeychecking=no -r $dist_folder $deploy_user@$deploy_host:$deploy_path
   export SSHPASS=
 }
