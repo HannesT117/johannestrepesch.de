@@ -9,12 +9,27 @@
   font-display: fallback;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: "Raleway", sans-serif;
   font-size: 100%;
   text-align: center;
-  background-repeat: no-repeat;
-  background-position: right center;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  height: 30px;
 }
 
 h1 {
@@ -38,9 +53,12 @@ a:hover {
   white-space: nowrap;
 }
 
+.privacy-policy p {
+  text-align: left;
+}
+
 @media all and (min-width: 815px) and (min-height: 500px) {
-  body {
-    margin: 0;
+  main {
     margin: 150px 25% 0% 25%;
   }
 }
