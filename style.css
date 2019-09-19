@@ -1,3 +1,7 @@
+:root {
+  --content-margin: 1rem;
+}
+
 @font-face {
   font-family: "Montserrat";
   src: url("assets/fonts/Montserrat-Regular.ttf");
@@ -7,6 +11,12 @@
   font-family: "Raleway";
   src: url("assets/fonts/Raleway-Regular.ttf");
   font-display: fallback;
+}
+
+@media all and (min-width: 767px) and (min-height: 500px) {
+  main {
+    --content-margin: 150px 25% 0 25%;
+  }
 }
 
 html,
@@ -25,6 +35,7 @@ body {
 
 main {
   flex: 1 0 auto;
+  margin: var(--content-margin);
 }
 
 footer {
@@ -55,10 +66,4 @@ a:hover {
 
 .privacy-policy p {
   text-align: left;
-}
-
-@media all and (min-width: 815px) and (min-height: 500px) {
-  main {
-    margin: 150px 25% 0% 25%;
-  }
 }
