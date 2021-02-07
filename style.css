@@ -3,19 +3,19 @@
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("assets/fonts/Montserrat-Regular.ttf");
+  font-family: 'Montserrat';
+  src: url('assets/fonts/Montserrat-Regular.ttf');
   font-display: swap;
 }
 @font-face {
-  font-family: "Raleway";
-  src: url("assets/fonts/Raleway-Regular.ttf");
+  font-family: 'Raleway';
+  src: url('assets/fonts/Raleway-Regular.ttf');
   font-display: fallback;
 }
 
 @media all and (min-width: 767px) and (min-height: 500px) {
   main {
-    --content-margin: 150px 25% 0 25%;
+    --content-margin: 100px 25% 0 25%;
   }
 }
 
@@ -26,7 +26,7 @@ body {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 100%;
   text-align: center;
   display: flex;
@@ -44,7 +44,7 @@ footer {
 }
 
 h1 {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-size: 3em;
   font-weight: lighter;
   font-stretch: expanded;
@@ -57,7 +57,7 @@ a {
 }
 
 a:hover {
-  font-style: italic;
+  text-decoration: none;
 }
 
 .no-wrap {
