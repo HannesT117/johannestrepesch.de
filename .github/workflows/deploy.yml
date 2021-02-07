@@ -1,0 +1,48 @@
+name: Deploy
+on:
+  workflow_dispatch:
+    branches: master
+  push:
+    branches: master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+
+      - name: Get yarn cache path
+        run: echo "YARN_CACHE_PATH=$(yarn cache dir)" >> $GITHUB_ENV
+
+      - name: Yarn cache
+        uses: actions/cache@v2.1.4
+        with:
+          path: ${{ env.YARN_CACHE_PATH }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn install --prefer-offline --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Deploy
+        env:
+          DEPLOY_KEY: ${{ secrets.SSH_KEY }}
+          HOST_KEY: ${{ secrets.HOST_KEY }}
+          HOST: ${{ secrets.HOST }}
+          USER: ${{ secrets.USER }}
+          SOURCE: 'dist/'
+          TARGET: 'html/'
+        run: |
+          mkdir ~/.ssh
+          echo "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          echo "$HOST_KEY" > ~/.ssh/known_hosts
+          rsync -avz -e "ssh -i ~/.ssh/deploy_key" $SOURCE $USER@$HOST:$TARGET

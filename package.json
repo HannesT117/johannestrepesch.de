@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html && cp ./assets/keybase.txt dist/"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.0"
