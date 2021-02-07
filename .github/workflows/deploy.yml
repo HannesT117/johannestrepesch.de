@@ -49,4 +49,4 @@ jobs:
           echo "$DEPLOY_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
           echo "$HOST_KEY" > ~/.ssh/known_hosts
-          rsync -avz -e "ssh -i ~/.ssh/deploy_key" $SOURCE $USER@$HOST:$TARGET
+          rsync -avz -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes" $SOURCE $USER@$HOST:$TARGET
