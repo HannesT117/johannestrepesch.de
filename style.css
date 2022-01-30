@@ -60,7 +60,3 @@ p {
   max-width: 600px;
   line-height: 1.5em;
 }
-
-.no-wrap {
-  white-space: nowrap;
-}
