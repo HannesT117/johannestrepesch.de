@@ -1,0 +1,7 @@
+<IfModule mod_expires.c>
+  # Turn on the module.
+  ExpiresActive on
+  # Set the default expiry times.
+  ExpiresDefault "access plus 6 months"
+  ExpiresByType text/html "access plus 1 day"
+</IfModule>
