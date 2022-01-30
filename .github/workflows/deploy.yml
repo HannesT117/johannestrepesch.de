@@ -1,9 +1,9 @@
 name: Deploy
 on:
   workflow_dispatch:
-    branches: master
+    branches: main
   push:
-    branches: master
+    branches: main
 
 defaults:
   run:
