@@ -5,5 +5,5 @@ dist/
 node_modules/
 
 # Misc
-.cache/
+.parcel-cache/
 .DS_Store

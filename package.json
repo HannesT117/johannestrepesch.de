@@ -11,6 +11,6 @@
     "build": "parcel build index.html && cp ./assets/keybase.txt dist/"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.0"
+    "parcel": "^2.2.1"
   }
 }
