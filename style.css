@@ -3,11 +3,6 @@
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('assets/fonts/Montserrat-Regular.ttf');
-  font-display: swap;
-}
-@font-face {
   font-family: 'Raleway';
   src: url('assets/fonts/Raleway-Regular.ttf');
   font-display: fallback;
@@ -15,7 +10,7 @@
 
 @media all and (min-width: 767px) and (min-height: 500px) {
   main {
-    --content-margin: 100px 25% 0 25%;
+    --content-margin: 50px 25% 0 25%;
   }
 }
 
@@ -28,7 +23,6 @@ body {
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 100%;
-  text-align: center;
   display: flex;
   flex-direction: column;
 }
@@ -39,13 +33,15 @@ main {
 }
 
 footer {
-  flex-shrink: 0;
-  height: 30px;
+  text-align: center;
+}
+
+footer > * {
+  margin-bottom: 2rem;
 }
 
 h1 {
-  font-family: 'Montserrat';
-  font-size: 3em;
+  font-size: 2em;
   font-weight: lighter;
   font-stretch: expanded;
 }
@@ -60,10 +56,10 @@ a:hover {
   text-decoration: none;
 }
 
-.no-wrap {
-  white-space: nowrap;
+p {
+  max-width: 500px;
 }
 
-.privacy-policy p {
-  text-align: left;
+.no-wrap {
+  white-space: nowrap;
 }
