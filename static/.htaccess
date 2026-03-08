@@ -1,3 +1,9 @@
+RewriteEngine On
+RewriteBase /
+
+Redirect 302 /linkedin https://linkedin.com/in/trepesch
+Redirect 302 /github https://github.com/HannesT117
+
 <IfModule mod_expires.c>
   # Turn on the module.
   ExpiresActive on
