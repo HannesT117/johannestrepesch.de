@@ -77,8 +77,17 @@ a:hover {
 }
 
 p {
-    max-width: 600px;
     line-height: 1.5em;
+}
+
+sup {
+    line-height: 0;
+    font-size: 0.8em;
+}
+
+.content-list li {
+    line-height: 1.5em;
+    margin-bottom: 6px;
 }
 
 .quote {
@@ -94,4 +103,27 @@ p {
 
 .quote figcaption {
     margin: 0;
+}
+
+.footnotes {
+    padding-left: 1rem;
+    text-align: left;
+    max-width: 600px;
+}
+
+.footnotes li {
+    color: grey;
+    font-size: 0.8rem;
+}
+
+@media all and (min-width: 600px) and (min-height: 500px) {
+    .footnotes {
+        margin-left: 10%;
+    }
+}
+
+@media all and (min-width: 900px) and (min-height: 500px) {
+    .footnotes {
+        margin-left: 25%;
+    }
 }

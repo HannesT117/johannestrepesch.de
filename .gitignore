@@ -7,3 +7,4 @@ node_modules/
 # Misc
 .parcel-cache/
 .DS_Store
+.aider*
