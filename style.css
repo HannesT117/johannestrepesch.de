@@ -116,6 +116,11 @@ sup {
     font-size: 0.8rem;
 }
 
+.footnotes li:target {
+    background-color: #fffbcc;
+    color: inherit;
+}
+
 @media all and (min-width: 600px) and (min-height: 500px) {
     .footnotes {
         margin-left: 10%;
