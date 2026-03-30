@@ -8,19 +8,19 @@
 }
 
 @font-face {
-    font-family: "Lexend-VariableFont_wght";
-    src: url("assets/fonts/Lexend-VariableFont_wght.ttf");
+    font-family: "Onest-Regular";
+    src: url("assets/fonts/Onest-Regular.ttf");
 }
 
 @media all and (min-width: 600px) and (min-height: 500px) {
-    main {
-        --content-margin: 20px 10% 0 10%;
+    body {
+        --content-margin: 20px 15% 0 5%;
     }
 }
 
 @media all and (min-width: 900px) and (min-height: 500px) {
-    main {
-        --content-margin: 50px 25% 0 25%;
+    body {
+        --content-margin: 30px 25% 0 5%;
     }
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 body {
-    font-family: "AlumniSansPinstripe-Regular", sans-serif;
+    font-family: "Onest-Regular", sans-serif;
     display: flex;
     flex-direction: column;
 }
@@ -42,11 +42,12 @@ main {
 }
 
 footer {
+    margin: var(--content-margin);
     text-align: center;
 }
 
 footer > * {
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
 }
 
 section {
@@ -119,16 +120,4 @@ sup {
 .footnotes li:target {
     background-color: #fffbcc;
     color: inherit;
-}
-
-@media all and (min-width: 600px) and (min-height: 500px) {
-    .footnotes {
-        margin-left: 10%;
-    }
-}
-
-@media all and (min-width: 900px) and (min-height: 500px) {
-    .footnotes {
-        margin-left: 25%;
-    }
 }
